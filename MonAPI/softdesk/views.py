@@ -7,6 +7,8 @@ from .permissions import IsContributorOrReadOnly, IsIssueAuthorOrReadOnly, IsCom
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+#from django.shortcuts import render
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
