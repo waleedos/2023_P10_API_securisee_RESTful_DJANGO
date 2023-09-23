@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics, permissions, serializers
 from rest_framework.permissions import IsAuthenticated
 from .models import User, Contributor, Project, Issue, Comment
 from .serializers import UserSerializer, ContributorSerializer, ProjectSerializer, IssueSerializer, CommentSerializer
@@ -7,13 +7,19 @@ from .permissions import IsContributorOrReadOnly, IsIssueAuthorOrReadOnly, IsCom
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-#from django.shortcuts import render
-
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        user = serializer.save()
+        user.consent = self.request.data.get('consent', False)
+        age = self.request.data.get('age', 0)
+        if int(age) < 15:
+            raise serializers.ValidationError("Vous devez avoir au moins 15 ans pour vous inscrire.")
+        user.save()
 
 
 class ContributorViewSet(viewsets.ModelViewSet):
@@ -24,7 +30,7 @@ class ContributorViewSet(viewsets.ModelViewSet):
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-    permission_classes = [IsAuthenticated, IsContributorOrReadOnly]  # Ajout de IsAuthenticated
+    permission_classes = [IsAuthenticated, IsContributorOrReadOnly]
 
     @action(detail=True, methods=['POST'])
     def add_contributor(self, request, pk=None):
@@ -53,3 +59,15 @@ class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [IsCommentAuthorOrReadOnly]
+
+
+class UserProfileView(generics.RetrieveUpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class UserDeleteView(generics.DestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]

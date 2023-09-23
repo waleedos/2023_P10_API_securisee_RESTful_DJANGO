@@ -12,6 +12,9 @@ class User(AbstractUser):
     # Pour savoir si l'utilisateur permet le partage de ses données
     can_data_be_shared = models.BooleanField(default=False)
 
+    # Nouveau champ pour le consentement
+    consent = models.BooleanField(default=False)
+
     class Meta:
         db_table = 'auth_user'
         # Utilise la même table que le modèle User intégré

@@ -23,11 +23,3 @@ class IsCommentAuthorOrReadOnly(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         return obj.author == request.user
-
-
-# Nouvelle classe de permission
-# J'ai laissé cette classe vide car vous n'avez pas spécifié de logique de permission pour elle.
-class AnotherPermissionClass(permissions.BasePermission):
-    def has_object_permission(self, request, view, obj):
-        # Votre logique de permission ici
-        pass
