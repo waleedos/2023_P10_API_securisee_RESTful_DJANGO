@@ -10,6 +10,8 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 # Importe du module status de rest_framework. Ce module contient des constantes HTTP pour les codes de statut.
 
+import json
+
 
 # -------------------------------------------------------------------------------------
 # Test de création d'utilisateur
@@ -105,3 +107,18 @@ class UserValidationTestCase(APITestCase):
         response = self.client.post("/api/users/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertFalse(response.data.get('consent'))
+
+# -------------------------------------------------------------------------------------
+
+
+class UserDataExportTestCase(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='testpassword', age=20)
+        self.client.force_authenticate(user=self.user)
+
+    def test_user_data_export(self):
+        response = self.client.get("/api/profile/export/")
+        response_data = json.loads(response.content)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn('username', response_data)
+        self.assertIn('email', response_data)

@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from rest_framework import viewsets, generics, permissions, serializers
 from rest_framework.permissions import IsAuthenticated
 from .models import User, Contributor, Project, Issue, Comment
@@ -71,3 +72,17 @@ class UserDeleteView(generics.DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+class UserDataExportView(generics.GenericAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        user = self.request.user
+        data = {
+            "username": user.username,
+            "email": user.email,
+            # Retiré la ligne qui tentait d'accéder à 'projects'
+            # "projects": [project.name for project in user.projects.all()],
+        }
+        return JsonResponse(data)

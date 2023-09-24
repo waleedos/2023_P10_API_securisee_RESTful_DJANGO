@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from . import views
 from .views import UserProfileView, UserDeleteView
+from .views import UserDataExportView
 
 
 router = DefaultRouter()
@@ -20,4 +21,5 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include(router.urls)),
+    path('profile/export/', UserDataExportView.as_view(), name='user-data-export'),
 ]
