@@ -105,5 +105,3 @@ class UserValidationTestCase(APITestCase):
         response = self.client.post("/api/users/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertFalse(response.data.get('consent'))
-
-# Juste un test
