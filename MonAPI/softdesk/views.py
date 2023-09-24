@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+from django.views.decorators.cache import cache_page  # Import pour la mise en cache
 from rest_framework import viewsets, generics, permissions, serializers
 from rest_framework.permissions import IsAuthenticated
 from .models import User, Contributor, Project, Issue, Comment
@@ -7,6 +8,8 @@ from .permissions import IsContributorOrReadOnly, IsIssueAuthorOrReadOnly, IsCom
 
 from rest_framework.decorators import action
 from rest_framework.response import Response
+
+from django.db.models import Prefetch
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -29,9 +32,15 @@ class ContributorViewSet(viewsets.ModelViewSet):
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
-    queryset = Project.objects.all()
+    queryset = Project.objects.select_related('author').prefetch_related(
+        Prefetch('contributors', queryset=Contributor.objects.select_related('user'))
+    )
     serializer_class = ProjectSerializer
     permission_classes = [IsAuthenticated, IsContributorOrReadOnly]
+
+    @cache_page(60 * 15)  # Cache pendant 15 minutes
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
 
     @action(detail=True, methods=['POST'])
     def add_contributor(self, request, pk=None):
@@ -82,7 +91,5 @@ class UserDataExportView(generics.GenericAPIView):
         data = {
             "username": user.username,
             "email": user.email,
-            # Retiré la ligne qui tentait d'accéder à 'projects'
-            # "projects": [project.name for project in user.projects.all()],
         }
         return JsonResponse(data)
