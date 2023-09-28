@@ -2,5 +2,61 @@
 .venv/
 env/
 ENV/
-venv/
 
+# IDE et éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers SQLite
+*.sqlite3
+*.sqlite3-journal
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Fichiers de migration Django
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Fichiers statiques et médias
+staticfiles/
+media/
+
+# Fichiers de test
+*.coverage
+.coverage/
+htmlcov/
+
+# Fichiers temporaires et de sauvegarde
+*.bak
+*.tmp
+*.temp
+
+# Fichiers Node.js
+node_modules/
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
+
+# Fichiers de build et de distribution
+dist/
+build/
+*.egg-info/
+
+# Fichiers de clé
+*.pem
+*.key
+
+# Fichiers de configuration
+*.conf
+*.ini
+*.yml
+*.yaml
+
+# Autres fichiers
+*.log

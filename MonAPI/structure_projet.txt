@@ -1,0 +1,25 @@
+.
+├── db.sqlite3
+├── manage.py
+├── MonAPI
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── softdesk
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── permissions.py
+│   ├── serializers.py
+│   ├── templates
+│   │   └── privacy_policy.html
+│   ├── test_permissions.py
+│   ├── tests.py
+│   ├── TOUtestsTOU.TOU
+│   ├── urls.py
+│   └── views.py
+└── structure_ce_projet.txt
+
+3 directories, 19 files
