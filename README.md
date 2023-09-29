@@ -159,7 +159,8 @@ python manage.py runserver
 
 ## Exploration de nos (endpoint) un par un : 
 
-************************************************************************************************
+================================================================================================
+
 ### 1 Inscription d'un utilisateur (Enregistrement)
 
     |PERMISSIONS  |
@@ -175,7 +176,7 @@ python manage.py runserver
     * En-têtes      : Aucun
     * Corps         : Brut - JSON
 
-
+```
 {
      "first_name": "Sebastien",
      "last_name": "Legrand",
@@ -183,7 +184,7 @@ python manage.py runserver
      "username": "slegrand",
      "password": "xxxxxxxx"
 }
-
+```
 
     * Cliquez sur le bouton "Envoyer"
     * Postman lance la requête
@@ -192,15 +193,15 @@ python manage.py runserver
 #### Résultat de la requête
     * Résultat : "Statut : 201 Créé"
 
-
-    {
-            "first_name": "Sebastien",
-            "last_name": "Legrand",
-            "username": "slegrand",                 
-            "email": "slegrad@softdesk.com",
-        "date_joined": "2023-09-28T08:03:14.395287Z"
-    }
-   
+```
+{
+        "first_name": "Sebastien",
+        "last_name": "Legrand",
+        "username": "slegrand",                 
+        "email": "slegrad@softdesk.com",
+    "date_joined": "2023-09-28T08:03:14.395287Z"
+}
+```   
         
-************************************************************************************************
+================================================================================================
 
