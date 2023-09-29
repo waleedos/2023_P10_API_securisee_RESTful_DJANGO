@@ -127,6 +127,13 @@ curl -O https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/m
 ### Détails de l'API
 Cette partie est une table avec les détails des (endpoint) de l'API. 
 
+#### ATTENTION : 
+Si vous voulez clicker sur les liens existants dans le tableau suivant, il est impératif que votre environnement
+virtuel soit activé, et que votre serveur est fonctionnel aussi : rappelez vous donc de le démarrer avec cette commande :
+```
+python manage.py runserver
+```
+
 | #  | Point d'accès API                                       | Méthode HTTP | URI                         | URL pour Cliquer                                                                 |
 |----|---------------------------------------------------------|-------------|-----------------------------|----------------------------------------------------------------------------------|
 | 1  | Inscription de l'utilisateur                            | POST        | `/signup/`                  | [Cliquez ici](http://127.0.0.1:8000/API_SOFTDESK/signup/)                |
@@ -148,4 +155,48 @@ Cette partie est une table avec les détails des (endpoint) de l'API.
 | 17 | Éditer un commentaire                                   | PUT         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
 | 18 | Supprimer un commentaire                                | DELETE      | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
 | 19 | Obtenir un commentaire via son ID                        | GET         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
+
+
+## Exploration de nos (endpoint) un par un : 
+
+************************************************************************************************
+### 1 Inscription d'un utilisateur (Enregistrement)
+
+    |PERMISSIONS  |
+    |-------------|
+    |AllowAny     |
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Utilisez la méthode "POST"
+    * URI           : /signup/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/signup/
+    * En-têtes      : Aucun
+    * Corps         : Brut - JSON 
+        ```
+            {
+                 "first_name": "Sebastien",
+                 "last_name": "Legrand",
+                 "email": "slegrad@softdesk.com",
+                 "username": "slegrand",
+                 "password": "xxxxxxxx"
+            }
+        ```
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 201 Créé"
+        ```
+            {
+                 "first_name": "Sebastien",
+                 "last_name": "Legrand",
+                 "username": "slegrand",                 
+                 "email": "slegrad@softdesk.com",
+                "date_joined": "2023-09-28T08:03:14.395287Z"
+            }
+        ```    
+************************************************************************************************
 
