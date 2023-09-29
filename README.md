@@ -286,12 +286,18 @@ python manage.py runserver
     "contributors": []
 }
 ```   
-        
-    |CONCLUSIONS                                                             |
-    |------------------------------------------------------------------------|
-    |L'utilisateur doit être authentifié                                     |
-    |------------------------------------------------------------------------|
-    |Un projet n'est accessible qu'à son gestionnaire et à ses contributeurs |      
+    
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Un projet n'est accessible qu'à son créateur et à ses contributeurs</td>
+    </tr>
+  </table>
 
 ========================================================================================
 
@@ -329,12 +335,18 @@ python manage.py runserver
 }
 ```   
 
-    |CONCLUSIONS                                    |
-    |-----------------------------------------------|
-    |L'utilisateur doit être authentifié            |
-    |-----------------------------------------------|
-    |L'utilisateur authentifié peut créer un projet |  
-        
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>L'utilisateur authentifié peut créer un projet</td>
+    </tr>
+  </table>
+
 ========================================================================================
 
 ## 5 Récupérer les détails du projet via son ID
@@ -371,12 +383,18 @@ python manage.py runserver
 }
 ```   
 
-    |CONCLUSIONS                                                      |
-    |-----------------------------------------------------------------|
-    |L'utilisateur doit être authentifié                              |
-    |-----------------------------------------------------------------|
-    |Les projets ne sont visibles que par leur auteur ou contributeur |  
-        
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Les projets ne sont visibles que par leur auteur ou contributeur</td>
+    </tr>
+  </table>
+  
 ========================================================================================
 
 ## 6 Mettre à jour un projet
@@ -423,12 +441,18 @@ python manage.py runserver
 }
 ```   
 
-    |CONCLUSIONS                                              |
-    |---------------------------------------------------------|
-    |L'utilisateur doit être authentifié                      |
-    |---------------------------------------------------------|
-    |Seul l'auteur a la permission de mettre à jour un projet |  
-        
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur a la permission de mettre à jour un projet</td>
+    </tr>
+  </table>
+
 ========================================================================================
 
 ## 7 Supprimer un projet et ses problèmes
@@ -442,48 +466,25 @@ python manage.py runserver
 #### Exécution de la requête
 
     * Ouvrez Postman
-    * Méthode       : "put"
+    * Méthode       : "DELETE"
     * URI           : /projects/{id}/
     * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
     * En-têtes      : Authorization = Bearer [jeton d'accès]
-    * Corps         : Raw - JSON
-
-```
-{
-    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
-    "description": "This description is UPDATED !",
-    "type": "PYTHON3",
-    "author": "5"
-}
-```
-
+    * Corps         : Aucun
     * Cliquez sur le bouton "Envoyer"
     * Postman lance la requête
     * Postman affiche le résultat et les données sérialisées
 
 #### Résultat de la requête
-    * Résultat : "Statut : 200 OK"
+    * Résultat : "Statut : 204 OK = Aucun Contenu"
 
 ```
 {
-    "id": 5,
-    "author": 5,
-    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
-    "description": "This description is UPDATED !",
-    "type": "PYTHON3",
-    "contributors": []
+
+
 }
 ```   
 
-    |CONCLUSIONS                                              |
-    |---------------------------------------------------------|
-    |L'utilisateur doit être authentifié                      |
-    |---------------------------------------------------------|
-    |Seul l'auteur a la permission de supprimer un projet     |  
-        
-========================================================================================
-
-<center>
   <table border="1">
     <tr>
       <th>CONCLUSIONS</th>
@@ -495,5 +496,203 @@ python manage.py runserver
       <td>Seul l'auteur a la permission de supprimer un projet</td>
     </tr>
   </table>
-</center>
+        
+========================================================================================
 
+## 8 Ajouter un collaborateur à un projet
+
+    |PERMISSIONS             |
+    |------------------------|
+    |IsAuthenticated         |
+    |------------------------|
+    |PermissionProjectsUsers |
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "POST"
+    * URI           : /projects/{id}/users/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Raw - JSON
+
+```
+{
+    "user_id": "2",
+    "permissions": "Member",
+    "role": "contributeur"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 201 Créé"
+
+```
+{
+    "id": 6,
+    "permissions": "Member",
+    "role": "contributeur",
+    "user": 2,
+    "project": 5
+}
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur du projet est autorisé à ajouter un contributeur</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 9 Récupérer la liste de tous les utilisateurs liés à un projet
+
+    |PERMISSIONS             |
+    |------------------------|
+    |IsAuthenticated         |
+    |------------------------|
+    |PermissionProjectsUsers |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /projects/{id}/users/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 Ok"
+
+```
+{
+    "id": 6,
+    "permissions": "Member",
+    "role": "contributeur",
+    "user": 2,
+    "project": 5
+}
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur du projet ou les contributeurs peuvent lister les utilisateurs liés à un projet</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 10 Retirer un utilisateur d'un projet
+
+    |PERMISSIONS             |
+    |------------------------|
+    |IsAuthenticated         |
+    |------------------------|
+    |PermissionProjectsUsers |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "DELETE"
+    * URI           : /projects/{id}/users/{id}
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/users/{id}
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 204 Pas de contenu"
+
+```
+
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur du projet peut supprimer un utilisateur lié à un projet</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 11 Récupérer la liste des problèmes liés à un projet
+
+    |PERMISSIONS     |
+    |----------------|
+    |IsAuthenticated |
+    |----------------|
+    |PermissionIssue |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /projects/{id}/issues/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/users/{id}
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 5,
+    "project": 2,
+    "assignee": 2,
+    "title": "Création de problème : l'auteur du projet peut créer un problème",
+    "desc": "Nous mettons ici la Description du problème de l'auteur",
+    "tag": "BUG",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "created_time": "2023-09-28T13:02:20.078733+02:00",
+    "author": 2
+}
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur du projet ou ses contributeurs peuvent lister les les problèmes</td>
+    </tr>
+  </table>
+        
+========================================================================================
