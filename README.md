@@ -116,3 +116,36 @@ curl -O https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/m
 ```
 * Maintenant, vous avez la collection dans votre dossier téléchargement, et vous pouvez l'importer directement depuis votre application locale Postman
 
+## Comment faire
+### Général
+* Ouvrez l'application API de requête Postman
+* Utilisez le (endpoint) pour vous inscrire à l'API
+* Utilisez le (endpoint) pour vous connecter à l'API
+* Utilisez les (endpoint) ...
+
+
+### Détails de l'API
+Cette partie est une table avec les détails des (endpoint) de l'API. 
+
+| #  | Point d'accès API                                       | Méthode HTTP | URI                         | URL pour Cliquer                                                                 |
+|----|---------------------------------------------------------|-------------|-----------------------------|----------------------------------------------------------------------------------|
+| 1  | Inscription de l'utilisateur                            | POST        | `/signup/`                  | [Cliquez ici](http://127.0.0.1:8000/API_SOFTDESK/signup/)                |
+| 2  | Connexion de l'utilisateur                              | POST        | `/login/`                   | [Cliquez ici](http://127.0.0.1:8000/API_SOFTDESK/login/)                 |
+| 3  | Récupérer la liste de tous les projets liés à l'utilisateur connecté | GET | `/projects/`               | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/)              |
+| 4  | Créer un projet                                         | POST        | `/projects/`                | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/)              |
+| 5  | Récupérer les détails du projet via son ID              | GET         | `/projects/{id}/`           | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/)         |
+| 6  | Mettre à jour un projet                                 | PUT         | `/projects/{id}/`           | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/)         |
+| 7  | Supprimer un projet et ses problèmes                    | DELETE      | `/projects/{id}/`           | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/)         |
+| 8  | Ajouter un collaborateur à un projet                    | POST        | `/projects/{id}/users/`     | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/users/)   |
+| 9  | Récupérer la liste de tous les utilisateurs liés à un projet | GET      | `/projects/{id}/users/`     | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/users/)   |
+| 10 | Retirer un utilisateur d'un projet                      | DELETE      | `/projects/{id}/users/{id}` | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/users/{id}/)|
+| 11 | Récupérer la liste des problèmes liés à un projet       | GET         | `/projects/{id}/issues/`    | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/)  |
+| 12 | Créer un problème dans un projet                        | POST        | `/projects/{id}/issues/`    | [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/)  |
+| 13 | Mettre à jour un problème dans un projet                | PUT         | `/projects/{id}/issues/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/)|
+| 14 | Supprimer un problème d'un projet                       | DELETE      | `/projects/{id}/issues/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/)|
+| 15 | Créer des commentaires sur un problème                  | POST        | `/projects/{id}/issues/{id}/comments/`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/)|
+| 16 | Récupérer la liste de tous les commentaires liés à un problème | GET    | `/projects/{id}/issues/{id}/comments/`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/)|
+| 17 | Éditer un commentaire                                   | PUT         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
+| 18 | Supprimer un commentaire                                | DELETE      | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
+| 19 | Obtenir un commentaire via son ID                        | GET         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
+
