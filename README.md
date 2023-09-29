@@ -159,7 +159,7 @@ python manage.py runserver
 
 ## Exploration de nos (endpoint) un par un : 
 
-================================================================================================
+========================================================================================
 
 ### 1 Inscription d'un utilisateur (Enregistrement)
 
@@ -170,7 +170,7 @@ python manage.py runserver
 #### Exécution de la requête
 
     * Ouvrez Postman
-    * Utilisez la méthode "POST"
+    * Méthode       : "POST"
     * URI           : /signup/
     * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/signup/
     * En-têtes      : Aucun
@@ -203,5 +203,43 @@ python manage.py runserver
 }
 ```   
         
-================================================================================================
+========================================================================================
 
+### 2 Connexion de l'utilisateur (signin) ou (login)
+
+    |PERMISSIONS  |
+    |-------------|
+    |AllowAny     |
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "POST"
+    * URI           : /login/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/login/
+    * En-têtes      : Aucun
+    * Corps         : Brut - JSON
+
+```
+{
+     "username": "slegrand",
+     "password": "xxxxxxxx"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5NjA4NTkwNSwiaWF0IjoxNjk1OTk5NTA1LCJqdGkiOiIzNDU4OWYyOGQ4NzQ0ZGU3YTgwZDNkYjk1NTBhNjg0YiIsInVzZXJfaWQiOjR9.RXz1Toll96yLkPKqRZHCt_CmuSy9X0VPzMPpuwXOU6o",
+
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NTkxNTA1LCJpYXQiOjE2OTU5OTk1MDUsImp0aSI6ImIwNzg2MjQ2NGI0YjQwZTE4YmVhNGRkOTM5ODRhNzUxIiwidXNlcl9pZCI6NH0.bl0DEyRpy8NpEgy-DUA5AYdPucKzbF6Gdc7S9xdZfjk"
+}
+```   
+        
+========================================================================================
