@@ -9,8 +9,8 @@ from django.contrib.auth.models import User
 class Project(models.Model):
 
     TYPE = (
-        ('PYTHON', 'Python3'),
-        ('DJANGO', 'DJANGO'),
+        ('PYTHON3', 'Python3'),
+        ('DJANGO', 'Django'),
         ('REACT', 'React'),
         ('BACKEND', 'Back-end'),
         ('FRONTEND', 'Front-end'),

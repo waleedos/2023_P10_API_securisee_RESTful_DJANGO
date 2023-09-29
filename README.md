@@ -161,7 +161,7 @@ python manage.py runserver
 
 ========================================================================================
 
-### 1 Inscription d'un utilisateur (Enregistrement)
+## 1 Inscription d'un utilisateur (Enregistrement)
 
     |PERMISSIONS  |
     |-------------|
@@ -205,7 +205,7 @@ python manage.py runserver
         
 ========================================================================================
 
-### 2 Connexion de l'utilisateur (signin) ou (login)
+## 2 Connexion de l'utilisateur (signin) ou (login)
 
     |PERMISSIONS  |
     |-------------|
@@ -241,5 +241,244 @@ python manage.py runserver
     "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NTkxNTA1LCJpYXQiOjE2OTU5OTk1MDUsImp0aSI6ImIwNzg2MjQ2NGI0YjQwZTE4YmVhNGRkOTM5ODRhNzUxIiwidXNlcl9pZCI6NH0.bl0DEyRpy8NpEgy-DUA5AYdPucKzbF6Gdc7S9xdZfjk"
 }
 ```   
+        
+========================================================================================
+
+## 3 Créer un projet
+
+    |PERMISSIONS        |
+    |-------------------|
+    |IsAuthenticated    |
+    |-------------------|
+    |PermissionProject  |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "POST"
+    * URI           : /project/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Brut - JSON
+
+```
+    { 
+        "title": "PROJET_DE_FIXBUG_API",
+        "description": "Description du projet FIXBUG-API",
+        "type": "DJANGO"
+    }
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 201 Created"
+
+```
+{
+    "id": 5,
+    "author": 5,
+    "title": "PROJET_DE_FIXBUG_API",
+    "description": "Description du projet FIXBUG-API",
+    "type": "DJANGO",
+    "contributors": []
+}
+```   
+        
+    |CONCLUSIONS                                                             |
+    |------------------------------------------------------------------------|
+    |L'utilisateur doit être authentifié                                     |
+    |------------------------------------------------------------------------|
+    |Un projet n'est accessible qu'à son gestionnaire et à ses contributeurs |      
+
+========================================================================================
+
+## 4  Récupérer la liste de tous les projets liés à l'utilisateur connecté
+
+    |PERMISSIONS        |
+    |-------------------|
+    |IsAuthenticated    |
+    |-------------------|
+    |PermissionProject  |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /project/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 2,
+    "author": 2,
+    "title": "PROJECT_06 (Auteur can update a project - Do not delete)",
+    "description": "This description will be update : UPDATED !",
+    "type": "ANDROID",
+    "contributors": [4, 5]
+}
+```   
+
+    |CONCLUSIONS                                    |
+    |-----------------------------------------------|
+    |L'utilisateur doit être authentifié            |
+    |-----------------------------------------------|
+    |L'utilisateur authentifié peut créer un projet |  
+        
+========================================================================================
+
+## 5 Récupérer les détails du projet via son ID
+
+    |PERMISSIONS        |
+    |-------------------|
+    |IsAuthenticated    |
+    |-------------------|
+    |PermissionProject  |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /projects/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 5,
+    "author": 5,
+    "title": "PROJET_DE_FIXBUG_API",
+    "description": "Description du projet FIXBUG-API",
+    "type": "DJANGO",
+    "contributors": []
+}
+```   
+
+    |CONCLUSIONS                                                      |
+    |-----------------------------------------------------------------|
+    |L'utilisateur doit être authentifié                              |
+    |-----------------------------------------------------------------|
+    |Les projets ne sont visibles que par leur auteur ou contributeur |  
+        
+========================================================================================
+
+## 6 Mettre à jour un projet
+
+    |PERMISSIONS        |
+    |-------------------|
+    |IsAuthenticated    |
+    |-------------------|
+    |PermissionProject  |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "put"
+    * URI           : /projects/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Raw - JSON
+
+```
+{
+    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
+    "description": "This description is UPDATED !",
+    "type": "PYTHON3",
+    "author": "5"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 5,
+    "author": 5,
+    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
+    "description": "This description is UPDATED !",
+    "type": "PYTHON3",
+    "contributors": []
+}
+```   
+
+    |CONCLUSIONS                                              |
+    |---------------------------------------------------------|
+    |L'utilisateur doit être authentifié                      |
+    |---------------------------------------------------------|
+    |Seul l'auteur a la permission de mettre à jour un projet |  
+        
+========================================================================================
+
+## 7 Supprimer un projet et ses problèmes
+
+    |PERMISSIONS        |
+    |-------------------|
+    |IsAuthenticated    |
+    |-------------------|
+    |PermissionProject  |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "put"
+    * URI           : /projects/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/project/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Raw - JSON
+
+```
+{
+    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
+    "description": "This description is UPDATED !",
+    "type": "PYTHON3",
+    "author": "5"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 5,
+    "author": 5,
+    "title": "MISE À JOUR DU 1ER  PROJET CREE PAR mlegendre",
+    "description": "This description is UPDATED !",
+    "type": "PYTHON3",
+    "contributors": []
+}
+```   
+
+    |CONCLUSIONS                                              |
+    |---------------------------------------------------------|
+    |L'utilisateur doit être authentifié                      |
+    |---------------------------------------------------------|
+    |Seul l'auteur a la permission de supprimer un projet     |  
         
 ========================================================================================
