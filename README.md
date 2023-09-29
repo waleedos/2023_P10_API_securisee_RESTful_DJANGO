@@ -199,7 +199,7 @@ python manage.py runserver
         "last_name": "Legrand",
         "username": "slegrand",                 
         "email": "slegrad@softdesk.com",
-    "date_joined": "2023-09-28T08:03:14.395287Z"
+        "date_joined": "2023-09-28T08:03:14.395287Z"
 }
 ```   
         
@@ -482,3 +482,15 @@ python manage.py runserver
     |Seul l'auteur a la permission de supprimer un projet     |  
         
 ========================================================================================
+
+<table border="1">
+  <tr>
+    <th>CONCLUSIONS</th>
+  </tr>
+  <tr>
+    <td>L'utilisateur doit être authentifié</td>
+  </tr>
+    <tr>
+    <td>Seul l'auteur a la permission de supprimer un projet</td>
+  </tr>
+</table>
