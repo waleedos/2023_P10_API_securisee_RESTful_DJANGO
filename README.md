@@ -87,11 +87,12 @@ cd Postman
 ./Postman
 ```
 
-## Importer la documentation Postman publiée
-* Ouvrez votre navigateur vers la documentation Postman publiée :
+## Importer la documentation Postman publiée, et pour cela, il existe 3 façons : 
+### 1- Ouvrez votre navigateur vers la documentation Postman publiée :
+
 [POSTMAN SOFTDESK COLLECTION ](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
 
-* Cliquez sur le bouton "Run in Postman" en haut à droite oubien sur le bouton suivant : 
+### 2- Cliquez sur le bouton "Run in Postman" en haut à droite oubien sur le bouton suivant : 
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
 
@@ -103,4 +104,15 @@ cd Postman
 
 Maintenant, vous pouvez voir la collection dans l'application Postman locale.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
+### 3- télécharger manuellement la collection de tests Postman .json : 
+* ouvrez un terminal, et déplacez vous dans le dossier téléchargement : 
+```
+cd ~/Téléchargements
+```
+
+* Copiez/coller la commande suivante dans le terminal:
+```
+curl -O https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/SOFTDESK.postman_collection.json
+```
+* Maintenant, vous avez la collection dans votre dossier téléchargement, et vous pouvez l'importer directement depuis votre application locale Postman
+
