@@ -483,14 +483,17 @@ python manage.py runserver
         
 ========================================================================================
 
-<table border="1">
-  <tr>
-    <th>CONCLUSIONS</th>
-  </tr>
-  <tr>
-    <td>L'utilisateur doit être authentifié</td>
-  </tr>
+<center>
+  <table border="1">
     <tr>
-    <td>Seul l'auteur a la permission de supprimer un projet</td>
-  </tr>
-</table>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur a la permission de supprimer un projet</td>
+    </tr>
+  </table>
+</center>
+
