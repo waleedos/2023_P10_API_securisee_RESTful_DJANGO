@@ -65,11 +65,11 @@ Lien vers la documentation publiée de Postman :
 
 ## Installation de Postman
 
-Téléchargez Postman depuis : `https://www.postman.com/`
+Téléchargez Postman depuis : `https://www.postman.com/downloads/`
 
 
 ### Exemple pour Linux (x64)
-* Ouvrez votre navigateur : https://www.postman.com/
+* Ouvrez votre navigateur : https://www.postman.com/downloads/
 * Sélectionnez "Télécharger l'application de bureau pour Linux"
 * Cliquez sur "Linux (x64)"
 * Postman est téléchargé
@@ -92,6 +92,7 @@ cd Postman
 [POSTMAN SOFTDESK COLLECTION ](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
 
 * Cliquez sur le bouton "Run in Postman" en haut à droite oubien sur le bouton suivant : 
+
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
 
 
