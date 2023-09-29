@@ -173,7 +173,8 @@ python manage.py runserver
     * URI           : /signup/
     * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/signup/
     * En-têtes      : Aucun
-    * Corps         : Brut - JSON 
+    * Corps         : Brut - JSON
+
         ```
             {
                  "first_name": "Sebastien",
@@ -183,12 +184,14 @@ python manage.py runserver
                  "password": "xxxxxxxx"
             }
         ```
+
     * Cliquez sur le bouton "Envoyer"
     * Postman lance la requête
     * Postman affiche le résultat et les données sérialisées
 
 #### Résultat de la requête
     * Résultat : "Statut : 201 Créé"
+
         ```
             {
                  "first_name": "Sebastien",
@@ -198,5 +201,6 @@ python manage.py runserver
                 "date_joined": "2023-09-28T08:03:14.395287Z"
             }
         ```    
+        
 ************************************************************************************************
 
