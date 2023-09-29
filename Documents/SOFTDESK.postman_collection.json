@@ -1,0 +1,6563 @@
+{
+	"info": {
+		"_postman_id": "9e9772b9-a8b7-4b86-b446-82b8cc05e55a",
+		"name": "SOFTDESK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30089525",
+		"_collection_link": "https://www.postman.com/ewekdev/workspace/softdesk-api/collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=share&source=collection_link&creator=30089525"
+	},
+	"item": [
+		{
+			"name": "Signup and Login",
+			"item": [
+				{
+					"name": "1- Inscription (Signup)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"first_name\": \"walid\",\n        \"last_name\": \"Khebou\",\n        \"email\": \"wk@softdesk.com\",\n        \"username\": \"wkhebou\",\n        \"password\": \"Wkhebou-pass\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"signup",
+								""
+							]
+						},
+						"description": "Tout le monde peut s'inscrire (Anyone can register)"
+					},
+					"response": [
+						{
+							"name": "1- Inscription (Signup) - User = mleroi",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"first_name\": \"Morgane\",\n        \"last_name\": \"Leroi\",\n        \"email\": \"mleroi@softdesk.com\",\n        \"username\": \"mleroi\",\n        \"password\": \"mleroi-pass\"\n    }\n    ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/signup/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"signup",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:12:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Morgane\",\n    \"last_name\": \"Leroi\",\n    \"username\": \"mleroi\",\n    \"email\": \"mleroi@softdesk.com\",\n    \"date_joined\": \"2023-09-27T12:12:49.672056Z\"\n}"
+						},
+						{
+							"name": "2- Inscription (Signup) - User = kBedoird",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"first_name\": \"Kevin\",\n        \"last_name\": \"Bedoird\",\n        \"email\": \"bedoird@softdesk.com\",\n        \"username\": \"kBedoird\",\n        \"password\": \"Kbedoird-pass\"\n    }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/signup/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"signup",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:16:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Kevin\",\n    \"last_name\": \"Bedoird\",\n    \"username\": \"kBedoird\",\n    \"email\": \"bedoird@softdesk.com\",\n    \"date_joined\": \"2023-09-27T12:16:36.485631Z\"\n}"
+						},
+						{
+							"name": "3- Inscription (Signup) - User = wkhebou",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"first_name\": \"walid\",\n        \"last_name\": \"Khebou\",\n        \"email\": \"wk@softdesk.com\",\n        \"username\": \"wkhebou\",\n        \"password\": \"Wkhebou-pass\"\n    }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/signup/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"signup",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:20:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"walid\",\n    \"last_name\": \"Khebou\",\n    \"username\": \"wkhebou\",\n    \"email\": \"wk@softdesk.com\",\n    \"date_joined\": \"2023-09-27T12:20:07.717214Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2- Authentification (Se Connecter = login)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"wkhebou\",\n    \"password\": \"Wkhebou-pass\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Authentification (Se Connecter : User : mleroi)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"mleroi\",\n    \"password\": \"mleroi-pass\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:32:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5NTkwNDM3OSwiaWF0IjoxNjk1ODE3OTc5LCJqdGkiOiIxNDZkM2EzMzBkMTc0YjhjOTU2YzM2NDhkNTU5ZTZmZCIsInVzZXJfaWQiOjJ9.5XtWRzrURVEq3G1xT1SGgc9x0o5gyRyo1QS2HYB-3NI\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDA5OTc5LCJpYXQiOjE2OTU4MTc5NzksImp0aSI6ImI3NWFiZmVmYzRjNTQ2MWY4ZmRkMTNkMDg4YzY4MDkyIiwidXNlcl9pZCI6Mn0.etKNAjiXDwikjcN79Q6_pPMmlcVQw21p3G0_CBJZQiU\"\n}"
+						},
+						{
+							"name": "2- Authentification (Se Connecter : User : kBedoird)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"kBedoird\",\n    \"password\": \"Kbedoird-pass\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:39:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5NTkwNDc5MywiaWF0IjoxNjk1ODE4MzkzLCJqdGkiOiI4ZGQ0Mjc4NTUzNzI0ODZjOTNmNGI2NzBlNjVjZTczNiIsInVzZXJfaWQiOjN9.TvFA70_7TsFj4hvyF3sfjpdxA0ij78FVU4jEx1rlBWw\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDEwMzkzLCJpYXQiOjE2OTU4MTgzOTMsImp0aSI6IjVlMTM3YmQ2MzMxMzQ5NDg5M2UxODc2OWUxZjdhOWMwIiwidXNlcl9pZCI6M30.9yJIbOqdMQ0sbuFNzbwJWbDka5a_l2DlU8m8yd1OTmQ\"\n}"
+						},
+						{
+							"name": "3- Authentification (Se Connecter : User : wkhebou)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"wkhebou\",\n    \"password\": \"Wkhebou-pass\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 12:41:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5NTkwNDkwNywiaWF0IjoxNjk1ODE4NTA3LCJqdGkiOiJmZGRmMjJkYzZjNzQ0Y2ZjOGU4M2JiNjA5MGYwZTFhOCIsInVzZXJfaWQiOjR9.Jh9SYlGM0ayTFo7GaPlKw7YtjDBELH2524tlal_gpMY\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDEwNTA3LCJpYXQiOjE2OTU4MTg1MDcsImp0aSI6IjcwOWVkNzdlZjU5NTQzYmU4NTg4ZGZiMjU3NWQ4ZGY0IiwidXNlcl9pZCI6NH0.51gcT4683aXDDOmTI8EejQ86lZcXiqR3_WxvCCEluC4\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "3- Création de nouveaux projets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"title\": \"PROJET P9 OC\",\n    \"description\": \"Application Web DJANGO\",\n    \"type\": \"DJANGO\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Création d'un 1er projet par : User : mleroi",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"title\": \"PROJET P9 OC\",\n    \"description\": \"Application Web DJANGO\",\n    \"type\": \"DJANGO\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 13:06:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"author\": 2,\n    \"title\": \"PROJET P9 OC\",\n    \"description\": \"Application Web DJANGO\",\n    \"type\": \"DJANGO\",\n    \"contributors\": []\n}"
+						},
+						{
+							"name": "2- Création d'un 2em projet par : User : mleroi",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"title\": \"REACT Mise à jour Application Web\",\n    \"description\": \"Mise à jour d'un Application Web Mobile par REACT\",\n    \"type\": \"REACT\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 13:15:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web\",\n    \"description\": \"Mise à jour d'un Application Web Mobile par REACT\",\n    \"type\": \"REACT\",\n    \"contributors\": []\n}"
+						},
+						{
+							"name": "3- Utilisateur non connecté ne peut créer des projets",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"title\": \"REACT Mise à jour Application Web\",\n    \"description\": \"Mise à jour d'un Application Web Mobile par REACT\",\n    \"type\": \"REACT\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 14:38:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "4- Récupérer la liste de tous les projets attachés à l'utilisateur connecté",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un auteur connecté peut Récupérer la liste de tous ses projets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 13:22:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"author\": 2,\n        \"title\": \"PROJET P9 OC\",\n        \"description\": \"Application Web DJANGO\",\n        \"type\": \"DJANGO\",\n        \"contributors\": []\n    },\n    {\n        \"id\": 2,\n        \"author\": 2,\n        \"title\": \"REACT Mise à jour Application Web\",\n        \"description\": \"Mise à jour d'un Application Web Mobile par REACT\",\n        \"type\": \"REACT\",\n        \"contributors\": []\n    }\n]"
+						},
+						{
+							"name": "2- un utilisateur non connecté ne peut récupérer aucun projet ou liste de projets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 14:40:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "3- Un contributor connecté peut Récupérer la liste des projets qui lui sont connectés",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:09:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"author\": 2,\n        \"title\": \"PROJET P9 OC\",\n        \"description\": \"Application Web DJANGO\",\n        \"type\": \"DJANGO\",\n        \"contributors\": [\n            4,\n            3\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "5 - Récupérer les détails du projet à partir de son identifiant",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un auteur connecté peut Récupérer les détails du projet à partir de son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 13:30:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web\",\n    \"description\": \"Mise à jour d'un Application Web Mobile par REACT\",\n    \"type\": \"REACT\",\n    \"contributors\": []\n}"
+						},
+						{
+							"name": "2- Meme avec l'ID d'un projet, un utilisateur non connecté ne peut Récupérer les détails de son projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDExNzkxLCJpYXQiOjE2OTU4MTk3OTEsImp0aSI6ImY4Mzg3YzE2YjM0YTQ2ODY4YmY1YWJlNTQ4MTBiY2ZhIiwidXNlcl9pZCI6Mn0.mLC5O4wcdFoGxqFHjepgCbnHRnon4JlOYwximFgKkwM",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:18:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "3- Un contributor connecté peut Récupérer les détails du projet à partir de son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:23:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"author\": 2,\n    \"title\": \"PROJET P9 OC\",\n    \"description\": \"Application Web DJANGO\",\n    \"type\": \"DJANGO\",\n    \"contributors\": [\n        4,\n        3\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "6 - Mettre à jour un projet",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDE0NTM4LCJpYXQiOjE2OTU4MjI1MzgsImp0aSI6ImM4MmY4YjYwMzUzNzQ2NDU5YWUyYmZmMDY2OGZjYmY1IiwidXNlcl9pZCI6Mn0.okw3N0_V3Qi5teqkLDtK1CkVccuFWK4FqGQxRRDoT48",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web finale\",\n    \"description\": \"Mise à jour d'un Application Mobile- REACT\",\n    \"type\": \"IOS\",\n    \"contributors\": []\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Connecté : Mettre à jour le projet N°2 de l'Utilisateur mleroi",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDE0NTM4LCJpYXQiOjE2OTU4MjI1MzgsImp0aSI6ImM4MmY4YjYwMzUzNzQ2NDU5YWUyYmZmMDY2OGZjYmY1IiwidXNlcl9pZCI6Mn0.okw3N0_V3Qi5teqkLDtK1CkVccuFWK4FqGQxRRDoT48",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web finale\",\n    \"description\": \"Mise à jour d'un Application Mobile- REACT\",\n    \"type\": \"IOS\",\n    \"contributors\": []\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 14:31:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web finale\",\n    \"description\": \"Mise à jour d'un Application Mobile- REACT\",\n    \"type\": \"IOS\",\n    \"contributors\": []\n}"
+						},
+						{
+							"name": "2- Non-Connecté : l'Utilisateur ne peut pas mettre à jour son projet",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDE0NTM4LCJpYXQiOjE2OTU4MjI1MzgsImp0aSI6ImM4MmY4YjYwMzUzNzQ2NDU5YWUyYmZmMDY2OGZjYmY1IiwidXNlcl9pZCI6Mn0.okw3N0_V3Qi5teqkLDtK1CkVccuFWK4FqGQxRRDoT48",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"REACT Mise à jour Application Web finale\",\n    \"description\": \"Mise à jour d'un Application Mobile- REACT\",\n    \"type\": \"IOS\",\n    \"contributors\": []\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 15:04:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "3- L'auteur seulement peut mettre à jour son projet s'il est connecté",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDE0NTM4LCJpYXQiOjE2OTU4MjI1MzgsImp0aSI6ImM4MmY4YjYwMzUzNzQ2NDU5YWUyYmZmMDY2OGZjYmY1IiwidXNlcl9pZCI6Mn0.okw3N0_V3Qi5teqkLDtK1CkVccuFWK4FqGQxRRDoT48",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"PROJECT_06 (Auteur can update a project - Do not delete)\",\n    \"description\": \"This description will be update : UPDATED !\",\n    \"type\": \"ANDROID\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 15:57:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"author\": 2,\n    \"title\": \"PROJECT_06 (Auteur can update a project - Do not delete)\",\n    \"description\": \"This description will be update : UPDATED !\",\n    \"type\": \"ANDROID\",\n    \"contributors\": [\n        4\n    ]\n}"
+						},
+						{
+							"name": "4- Le contributeur ne peut pas mettre à jour un projet",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDIyNDg1LCJpYXQiOjE2OTU4MzA0ODUsImp0aSI6ImVjNjJjZjRhZjY1NjQ2ZjY4ZGZiN2I2YmU4YmI1YjlmIiwidXNlcl9pZCI6NH0.XHGGFjkkYiXb6nNEV46UIEANzb3q4JKjgFHt6Ocarg0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"PROJECT_07 (contributor can't change project)\",\n    \"description\": \"This description will be update : UPDATED !\",\n    \"type\": \"ANDROID\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:02:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "7- Supprimer un projet et ses problèmes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- L'utilisateur non connecté ne peut pas supprimer un projet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:07:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un utilisateur connecté ne supprimer que son propre projet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDIzMzMzLCJpYXQiOjE2OTU4MzEzMzMsImp0aSI6ImIxMTJlNGYxOTc0MDRkZTdhZGM0ZWRkYjgyMzlkNTc5IiwidXNlcl9pZCI6Mn0.wlqVlGKoGaaSfdvEenGEVE_px4ohj-iaV8XXT_iIPeM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:16:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "3- Un contributeur connecté ne peut pas supprimer un projet.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDIzNzUzLCJpYXQiOjE2OTU4MzE3NTMsImp0aSI6IjhjMjk2N2M4OWEyZDRkNjNhOTQ2MGIwYjc0ZTE1ZjhhIiwidXNlcl9pZCI6NH0.vPhhrlX7oxU6wVD90KMWyzMIbs96vY-trWHmU8jflJk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:23:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contributor",
+			"item": [
+				{
+					"name": "8 - Ajouter un collaborateur à un projet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDI0NDA3LCJpYXQiOjE2OTU4MzI0MDcsImp0aSI6IjE4YWQ0ZDVlMGVlNDQ2MzNhZmY0Mzk2ZDE3MzBlZDE0IiwidXNlcl9pZCI6Mn0.WHGcowmHv959cRtZYR4k7gMU3l1kcHu3TjHuodulGQI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"3\",\n    \"permissions\": \"admin\",\n    \"role\": \"Manager\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"3",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un auteur connecté peut ajouter un collaborateur à son projet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDI0NDA3LCJpYXQiOjE2OTU4MzI0MDcsImp0aSI6IjE4YWQ0ZDVlMGVlNDQ2MzNhZmY0Mzk2ZDE3MzBlZDE0IiwidXNlcl9pZCI6Mn0.WHGcowmHv959cRtZYR4k7gMU3l1kcHu3TjHuodulGQI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"3\",\n    \"permissions\": \"admin\",\n    \"role\": \"Manager\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:35:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"permissions\": \"admin\",\n    \"role\": \"Manager\",\n    \"user\": 3,\n    \"project\": 3\n}"
+						},
+						{
+							"name": "2- Un auteur Non-connecté ne peut pas ajouter un collaborateur à son projet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDI0NDA3LCJpYXQiOjE2OTU4MzI0MDcsImp0aSI6IjE4YWQ0ZDVlMGVlNDQ2MzNhZmY0Mzk2ZDE3MzBlZDE0IiwidXNlcl9pZCI6Mn0.WHGcowmHv959cRtZYR4k7gMU3l1kcHu3TjHuodulGQI",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"3\",\n    \"permissions\": \"admin\",\n    \"role\": \"Manager\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:39:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "3- Un contributeur ne peut pas ajouter de collaborateur à un projet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDI1MDg1LCJpYXQiOjE2OTU4MzMwODUsImp0aSI6IjE4ZGNiZTViYmU0MzRmOTk4YWI1NzI1NmMyMTZjMWQxIiwidXNlcl9pZCI6M30.ubbtEqxygUJz2kRQ0uAfVDJfjaiyKUIiJcIQ3mdeu-E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"4\",\n    \"permissions\": \"admin\",\n    \"role\": \"Manager\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 16:45:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "9 - Récupérer la liste de tous les utilisateurs attachés à un projet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"3",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- L'auteur connecté du projet peut récupérer la liste des contributeurs du projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 18:48:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"permissions\": \"admin\",\n        \"role\": \"Manager\",\n        \"user\": 3,\n        \"project\": 3\n    },\n    {\n        \"id\": 3,\n        \"permissions\": \"admin\",\n        \"role\": \"Manager\",\n        \"user\": 4,\n        \"project\": 3\n    }\n]"
+						},
+						{
+							"name": "2- L'utilisateur non connecté ne peut pas récupérer la liste des contributeurs du projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 18:52:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "3- Le contributeur connecté peut récupérer la liste des contributeurs du projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 18:55:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"permissions\": \"admin\",\n        \"role\": \"Manager\",\n        \"user\": 3,\n        \"project\": 3\n    },\n    {\n        \"id\": 3,\n        \"permissions\": \"admin\",\n        \"role\": \"Manager\",\n        \"user\": 4,\n        \"project\": 3\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "10 - Supprimer un utilisateur d'un projet",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"3",
+								"users",
+								"3",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- L'auteur connecté d'un projet peut supprimer un contributeur",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 19:01:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"\""
+						},
+						{
+							"name": "2- Un contributeur connecté ou non, ne peut pas supprimer un contributeur",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 19:09:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- L'utilisateur connecté ne peut pas supprimer un contributeur",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 19:09:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "4- Un utilisateur Non-Connecté ne peut pas supprimer un Contributeur",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/3/users/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"3",
+										"users",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 19:37:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Issue",
+			"item": [
+				{
+					"name": "11- Créer un probleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Création de problème : l'auteur du projet peut créer un problème\",\n    \"desc\": \"Nous mettons ici la Description du problème\",\n    \"tag\":  \"BUG\",\n    \"priority\": \"LOW\",\n    \"status\": \"TODO\",\n    \"author\": \"2\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un utilisateur non connecté ne peut créer aucun probleme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Création de problème : un Utilisateur non connecté ne peut créer un probleme\",\n    \"desc\": \"Nous mettons ici la Description du problème\",\n    \"tag\":  \"BUG\",\n    \"priority\": \"LOW\",\n    \"status\": \"TODO\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:57:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un auteur connecté d'un projet peut créer un probleme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Création de problème : l'auteur du projet peut créer un problème\",\n    \"desc\": \"Nous mettons ici la Description du problème de l'auteur\",\n    \"tag\":  \"BUG\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"TODO\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:41:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"project\": 2,\n    \"assignee\": 2,\n    \"title\": \"Création de problème : l'auteur du projet peut créer un problème\",\n    \"desc\": \"Nous mettons ici la Description du problème de l'auteur\",\n    \"tag\": \"BUG\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"TODO\",\n    \"created_time\": \"2023-09-28T12:41:07.160865+02:00\",\n    \"author\": 2\n}"
+						},
+						{
+							"name": "3- Un contributor connecté peut créer un probleme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Création de problème : Un contributor du projet connecté peut créer un problème\",\n    \"desc\": \"Nous mettons ici la Description du problème de ce contributor\",\n    \"tag\":  \"BUG\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"END\",\n    \"author\": \"4\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 11:06:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"project\": 2,\n    \"assignee\": 4,\n    \"title\": \"Création de problème : Un contributor du projet connecté peut créer un problème\",\n    \"desc\": \"Nous mettons ici la Description du problème de ce contributor\",\n    \"tag\": \"BUG\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"END\",\n    \"created_time\": \"2023-09-28T13:06:31.732251+02:00\",\n    \"author\": 4\n}"
+						},
+						{
+							"name": "4- un utilisateur connecté (sans relation avec 1 projet) ne peut pas créer un probleme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Création de problème : un utilisateur sans relation avec le projet, ne peut créer un probleme\",\n    \"desc\": \"Nous mettons ici la Description du problème de cet utilisateur\",\n    \"tag\":  \"BUG\",\n    \"priority\": \"LOW\",\n    \"status\": \"CURRENT\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:46:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "12- Récupérer la liste des problèmes liés à un projet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un utilisateur non connecté ne peut récuperer la liste des problemes d'un projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 10:53:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un auteur connecté d'un projet peut récupérer la liste des problemes de ce projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 11:11:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "600"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5,\n        \"project\": 2,\n        \"assignee\": 2,\n        \"title\": \"Création de problème : l'auteur du projet peut créer un problème\",\n        \"desc\": \"Nous mettons ici la Description du problème de l'auteur\",\n        \"tag\": \"BUG\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"TODO\",\n        \"created_time\": \"2023-09-28T13:02:20.078733+02:00\",\n        \"author\": 2\n    },\n    {\n        \"id\": 6,\n        \"project\": 2,\n        \"assignee\": 4,\n        \"title\": \"Création de problème : Un contributor du projet connecté peut créer un problème\",\n        \"desc\": \"Nous mettons ici la Description du problème de ce contributor\",\n        \"tag\": \"BUG\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"END\",\n        \"created_time\": \"2023-09-28T13:06:31.732251+02:00\",\n        \"author\": 4\n    }\n]"
+						},
+						{
+							"name": "3- Un contributeur d'un projet (connecté) peut lister tous les problemes du projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 11:29:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "869"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5,\n        \"project\": 2,\n        \"assignee\": 2,\n        \"title\": \"Création de problème : l'auteur du projet peut créer un problème\",\n        \"desc\": \"Nous mettons ici la Description du problème de l'auteur\",\n        \"tag\": \"BUG\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"TODO\",\n        \"created_time\": \"2023-09-28T13:02:20.078733+02:00\",\n        \"author\": 2\n    },\n    {\n        \"id\": 6,\n        \"project\": 2,\n        \"assignee\": 4,\n        \"title\": \"Création de problème : Un contributor du projet connecté peut créer un problème\",\n        \"desc\": \"Nous mettons ici la Description du problème de ce contributor\",\n        \"tag\": \"BUG\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"END\",\n        \"created_time\": \"2023-09-28T13:06:31.732251+02:00\",\n        \"author\": 4\n    },\n    {\n        \"id\": 7,\n        \"project\": 2,\n        \"assignee\": 5,\n        \"title\": \"Création de problème : Un tout nouveau contributo\",\n        \"desc\": \"Nous mettons ici la Description du dernier problème\",\n        \"tag\": \"TASK\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"TODO\",\n        \"created_time\": \"2023-09-28T13:28:06.016408+02:00\",\n        \"author\": 5\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "13 - Mettre à jour un problème dans un projet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Not connected user cannot update a problem\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- L'utilisateur non connecté ne peut pas mettre à jour un problème",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 15:36:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un Contributor connecté peut mettre à jour un problème que lui meme a crée",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Contributor connecté peut mettre à jour un problème que lui meme a crée\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"BUG\",\n    \"priority\" : \"MEDIUM\",\n    \"status\" : \"CURRENT\",\n    \"assignee\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 15:53:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"project\": 2,\n    \"assignee\": 2,\n    \"title\": \"Contributor connecté peut mettre à jour un problème que lui meme a crée\",\n    \"desc\": \"Issue\",\n    \"tag\": \"BUG\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"CURRENT\",\n    \"created_time\": \"2023-09-28T13:28:06.016408+02:00\",\n    \"author\": 5\n}"
+						},
+						{
+							"name": "3- Un utilisateur connecté (sans relation avec un projet), ne peut mettre a jour ce dernier",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Un utilisateur connecté (sans relation avec un projet), ne peut mettre a jour ce dernier\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"BUG\",\n    \"priority\" : \"MEDIUM\",\n    \"status\" : \"CURRENT\",\n    \"assignee\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 15:57:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "4- Un contributor connecté (du meme projet), ne peut mettre a jour ce dernier, sauf s'il est l'auteur du probleme",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Un utilisateur connecté (sans relation avec un projet), ne peut mettre a jour ce dernier\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"BUG\",\n    \"priority\" : \"MEDIUM\",\n    \"status\" : \"CURRENT\",\n    \"assignee\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 15:57:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "5- L'auteur d'un projet (connecté) ne peut mettre à jour un probleme créé par un contributor",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Un utilisateur connecté (sans relation avec un projet), ne peut mettre a jour ce dernier\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"BUG\",\n    \"priority\" : \"MEDIUM\",\n    \"status\" : \"END\",\n    \"assignee\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:01:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "14- Supprimer un probleme d'un projet",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"7",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un utilisateur non connecté ne peut supprimer aucun probleme d'un projet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:09:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un utilisateur connecté ne peut pas supprimer un probleme d'un projet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:12:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- Un contributor connecté ne peut pas supprimer un probleme d'un projet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:12:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "4- L'auteur connecté d'un projet ne peut pas supprimer un probleme de ce dernier",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:15:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "5- L'auteur connecté d'un Probleme de projet peut le supprimer",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Connected author of the issue can update this issue\",\n    \"desc\" : \"Issue\",\n    \"tag\": \"TASK\",\n    \"priority\" : \"LOW\",\n    \"status\" : \"END\",\n    \"assignee\": \"7\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:17:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "15- Créer des commentaires sur un problème",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"15 - Créer des commentaires sur un problème\",\n    \"author\": \"1\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"7",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un utilisateur Non-Connecté ne peut pas créer des commentaire",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"15 - Créer des commentaires sur un problème\",\n    \"author\": \"1\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:20:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un utilisateur connecté ne peut pas commenter un probleme s'il n'est ni auteur ni contributor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"15 - Créer des commentaires sur un problème\",\n    \"author\": \"1\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/7/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"7",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:24:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- un contributor d'un projet peut commenter un de ses probleme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n    \"author\": \"4\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:39:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"issue\": 9,\n    \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n    \"created_time\": \"2023-09-28T18:39:33.193915+02:00\",\n    \"author\": 4\n}"
+						},
+						{
+							"name": "4- L'auteur d'un projet peut commenter un des probleme de ce projet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"L'auteur d'un projet peut commenter un des probleme de ce projet\",\n    \"author\": \"2\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:41:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"issue\": 9,\n    \"description\": \"L'auteur d'un projet peut commenter un des probleme de ce projet\",\n    \"created_time\": \"2023-09-28T18:41:57.017156+02:00\",\n    \"author\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "16- Récupérer la liste de tous les commentaires liés à un problème",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"9",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Utilisateur Non-Connecté ne peut pas avoir la liste des commentaires d'un probleme de projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:47:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Utilisateur Connecté ne peut pas avoir la liste des commentaires d'un probleme de projet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:50:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- Un contributeur d'un projet peut avoir la liste des commentaires d'un de ses problemes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:51:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"issue\": 9,\n        \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n        \"created_time\": \"2023-09-28T18:39:33.193915+02:00\",\n        \"author\": 4\n    },\n    {\n        \"id\": 2,\n        \"issue\": 9,\n        \"description\": \"L'auteur d'un projet peut commenter un des probleme de ce projet\",\n        \"created_time\": \"2023-09-28T18:41:57.017156+02:00\",\n        \"author\": 2\n    }\n]"
+						},
+						{
+							"name": "4- L'auteur d'un projet peut avoir la liste des commentaires d'un de ses problemes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 16:54:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"issue\": 9,\n        \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n        \"created_time\": \"2023-09-28T18:39:33.193915+02:00\",\n        \"author\": 4\n    },\n    {\n        \"id\": 2,\n        \"issue\": 9,\n        \"description\": \"L'auteur d'un projet peut commenter un des probleme de ce projet\",\n        \"created_time\": \"2023-09-28T18:41:57.017156+02:00\",\n        \"author\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "17- Edition et mise à jour des commentaires",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"9",
+								"comments",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Utilisateur non-connecté ne peut pas editer un commentaire",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 18:46:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Utilisateur connecté ne peut pas editer un commentaire",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Commentaire pour le projet N° 2 - probleme N° 9 \",\n    \"author\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 18:52:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- L'auteur du projet ne peut pas editer un commentaire",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Commentaire pour le projet N° 2 - probleme N° 9 changement du commentaire\",\n    \"author\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:06:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "4- l'auteur du commentaire peut l'editer et le changer",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Commentaire pour le projet N° 2 - probleme N° 9 changement du commentaire accepté car c'est l'auteur de ce dernier\",\n    \"author\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:09:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"issue\": 9,\n    \"description\": \"Commentaire pour le projet N° 2 - probleme N° 9 changement du commentaire accepté car c'est l'auteur de ce dernier\",\n    \"created_time\": \"2023-09-28T21:09:51.081702+02:00\",\n    \"author\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "17- Supprimer un commentaire",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"9",
+								"comments",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- Un utilisateur non connecté ne peut pas supprimer un commentaire",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:12:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- Un utilisateur connecté ne peut pas supprimer un commentaire",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxOTIxLCJpYXQiOjE2OTU4Mzk5MjEsImp0aSI6Ijk4MWVjMWJiMDViMzRiMzhhYzM0ZjkzNGMzZWRiYjA4IiwidXNlcl9pZCI6M30.VIYSOk53DRiVVhSDNFRNe8weTR5d5LdTqsvldu7FIyA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:14:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "3- Un contributor du projet ne peut pas supprimer un commentaire",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:16:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "4- l'auteur du projet ne peut pas supprimer un commentaire",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:17:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						},
+						{
+							"name": "5- L'auteur du commentaire peut le supprimer",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMyMTQ4LCJpYXQiOjE2OTU4NDAxNDgsImp0aSI6ImE0MGEwYThmZTE2NDQwMjc4NDU2ZDY5NTFiODAwZGUwIiwidXNlcl9pZCI6NH0.m3ENcvgVYdacpzioIrvlLxVA4fjrDgY3xXoC-rJ8fgk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:18:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "18- Appeler et voir le commentaire par son ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"API_SOFTDESK",
+								"projects",
+								"2",
+								"issues",
+								"9",
+								"comments",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1- L'utilisateur non connecté ne peut pas obtenir de commentaire via son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:20:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "2- L'utilisateur connecté ne peut pas obtenir de commentaire via son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:22:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Not found.\"\n}"
+						},
+						{
+							"name": "3- Un contributor connecté peut obtenir le commentaire via son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:27:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"issue\": 9,\n    \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n    \"created_time\": \"2023-09-28T18:39:33.193915+02:00\",\n    \"author\": 4\n}"
+						},
+						{
+							"name": "4- L'auteur du projet peut obtenir le commentaire via son identifiant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"API_SOFTDESK",
+										"projects",
+										"2",
+										"issues",
+										"9",
+										"comments",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Sep 2023 19:29:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"issue\": 9,\n    \"description\": \"Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme\",\n    \"created_time\": \"2023-09-28T18:39:33.193915+02:00\",\n    \"author\": 4\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
