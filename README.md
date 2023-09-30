@@ -156,9 +156,9 @@ python manage.py runserver
 | 14 | Supprimer un problème d'un projet                       | DELETE      | `/projects/{id}/issues/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/)|
 | 15 | Créer des commentaires sur un problème                  | POST        | `/projects/{id}/issues/{id}/comments/`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/)|
 | 16 | Récupérer la liste de tous les commentaires liés à un problème | GET    | `/projects/{id}/issues/{id}/comments/`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/)|
-| 17 | Éditer un commentaire                                   | PUT         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
-| 18 | Supprimer un commentaire                                | DELETE      | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
-| 19 | Obtenir un commentaire via son ID                        | GET         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/56/issues/{id}/comments/{id}/)|
+| 17 | Éditer un commentaire                                   | PUT         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/)|
+| 18 | Supprimer un commentaire                                | DELETE      | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/)|
+| 19 | Obtenir un commentaire via son ID                        | GET         | `/projects/{id}/issues/{id}/comments/{id}`| [Cliquez ici](http://localhost:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/)|
 
 
 ## Exploration de nos (endpoint) un par un : 
