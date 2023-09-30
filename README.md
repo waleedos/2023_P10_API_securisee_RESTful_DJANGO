@@ -920,7 +920,7 @@ python manage.py runserver
       <td>L'utilisateur doit être authentifié</td>
     </tr>
       <tr>
-      <td>Seul l'auteur d'un projet ou ses contributeur peuvent créer un commentaire sur un probleme</td>
+      <td>Seul l'auteur d'un projet ou ses contributeurs peuvent créer un commentaire sur un probleme</td>
     </tr>
   </table>
         
@@ -977,7 +977,7 @@ python manage.py runserver
       <td>L'utilisateur doit être authentifié</td>
     </tr>
       <tr>
-      <td>Seul l'auteur d'un projet ou ses contributeur peuvent acceder à la liste des commentaire sur un probleme</td>
+      <td>Seul l'auteur d'un projet ou ses contributeurs peuvent acceder à la liste des commentaire sur un probleme</td>
     </tr>
   </table>
         
