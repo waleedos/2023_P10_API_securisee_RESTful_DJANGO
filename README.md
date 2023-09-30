@@ -644,7 +644,72 @@ python manage.py runserver
         
 ========================================================================================
 
-## 11 Récupérer la liste des problèmes liés à un projet
+## 11 Créer un problème dans un projet
+
+    |PERMISSIONS     |
+    |----------------|
+    |IsAuthenticated |
+    |----------------|
+    |PermissionIssue |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "POST"
+    * URI           : /projects/{id}/issues/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Raw - JSON
+
+```
+{
+    "title": "Création de problème pour le projet créé par mlegendre",
+    "desc": "Pour le projet N°5 créé par mlegendre",
+    "tag":  "IMPROUVMENT",
+    "priority": "LOW",
+    "status": "CURRENT",
+    "author": "5"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 201 Créé"
+
+```
+{
+    "id": 10,
+    "project": 5,
+    "assignee": 5,
+    "title": "Création de problème pour le projet créé par mlegendre",
+    "desc": "Pour le projet N°5 créé par mlegendre",
+    "tag": "IMPROUVMENT",
+    "priority": "LOW",
+    "status": "CURRENT",
+    "created_time": "2023-09-30T08:14:11.958125+02:00",
+    "author": 5
+}
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur et les contributeurs d'un projet peuvent créer des problèmes</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 12 Récupérer la liste des problèmes liés à un projet
 
     |PERMISSIONS     |
     |----------------|
@@ -657,7 +722,7 @@ python manage.py runserver
     * Ouvrez Postman
     * Méthode       : "GET"
     * URI           : /projects/{id}/issues/
-    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/users/{id}
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/
     * En-têtes      : Authorization = Bearer [jeton d'accès]
     * Corps         : Aucun
     * Cliquez sur le bouton "Envoyer"
@@ -692,6 +757,71 @@ python manage.py runserver
     </tr>
       <tr>
       <td>Seul l'auteur du projet ou ses contributeurs peuvent lister les les problèmes</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 13 Mettre à jour un problème dans un projet
+
+    |PERMISSIONS     |
+    |----------------|
+    |IsAuthenticated |
+    |----------------|
+    |PermissionIssue |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "PUT"
+    * URI           : /projects/{id}/issues/{id}
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : : Brut - JSON
+
+```
+{
+    "title": "Création de problème pour le projet créé par mlegendre, mis à jour par mleroi",
+    "desc": "Pour le projet N°5 créé par mlegendre",
+    "tag":  "IMPROUVMENT",
+    "priority": "MEDIUM",
+    "status": "CURRENT",
+    "author": "5"
+}
+```
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 10,
+    "project": 5,
+    "assignee": 5,
+    "title": "Création de problème pour le projet créé par mlegendre, mis à jour par mleroi",
+    "desc": "Pour le projet N°5 créé par mlegendre",
+    "tag": "IMPROUVMENT",
+    "priority": "MEDIUM",
+    "status": "CURRENT",
+    "created_time": "2023-09-30T08:14:11.958125+02:00",
+    "author": 5
+}
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un probleme peut l'editer et le mettre à jour</td>
     </tr>
   </table>
         
