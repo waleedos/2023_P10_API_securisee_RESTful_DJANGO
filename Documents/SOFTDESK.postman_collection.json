@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "9e9772b9-a8b7-4b86-b446-82b8cc05e55a",
 		"name": "SOFTDESK",
+		"description": "**L'application pour signaler et suivre les problèmes techniques des entreprises clientes en B2B.**\n\n<img src=\"https://content.pstmn.io/52d6e7e3-b83f-426c-8b25-81cdfe099419/c29mdGRlc2stbG9nby5wbmc=\" alt=\"\">",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30089525",
 		"_collection_link": "https://www.postman.com/ewekdev/workspace/softdesk-api/collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=share&source=collection_link&creator=30089525"
@@ -311,7 +312,8 @@
 								"login",
 								""
 							]
-						}
+						},
+						"description": "<table><tbody><tr><th>CONCLUSIONS</th></tr><tr><td><div>Seuls Les utilisateurs deja enregistrés peuvent s'authentifié</div><div contenteditable=\"false\"><div><div><div></div></div></div><div></div></div></td></tr></tbody></table>"
 					},
 					"response": [
 						{
@@ -553,7 +555,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Ce dossier est divisé en deux sous-dossiers. Le premier, N°1, est consacré aux **tests d'API** pour la **souscription**, couvrant à la fois l'inscription et le **signup**. Le deuxième, N°2, est dédié aux **tests de login**. L'objectif est de comprendre en profondeur **toutes les permissions associées à ces deux endpoints**."
 		},
 		{
 			"name": "Projects",
@@ -593,7 +596,8 @@
 								"projects",
 								""
 							]
-						}
+						},
+						"description": "<table><tbody><tr><th>CONCLUSIONS</th></tr><tr><td><div>L'utilisateur doit être authentifié</div><div contenteditable=\"false\"><div><div><div></div></div></div><div></div></div></td></tr><tr><td><div>Seuls Les utilisateurs enregistrés et connectés peuvent créer des projets</div><div contenteditable=\"false\"><div><div><div></div></div></div><div></div></div></td></tr></tbody></table>"
 					},
 					"response": [
 						{
@@ -884,7 +888,8 @@
 								"projects",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Un projet n'est accessible que par son créateur et ses contributeurs |"
 					},
 					"response": [
 						{
@@ -1148,7 +1153,8 @@
 								"projects",
 								"2"
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Les projets ne sont visibles que par leur auteur ou contributeurs |"
 					},
 					"response": [
 						{
@@ -1429,7 +1435,8 @@
 									"disabled": true
 								}
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur a la permission de mettre à jour un projet |"
 					},
 					"response": [
 						{
@@ -1832,7 +1839,8 @@
 								"1",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur a la permission de supprimer un projet |"
 					},
 					"response": [
 						{
@@ -2104,7 +2112,8 @@
 								"users",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur du projet est autorisé à ajouter un contributeur |"
 					},
 					"response": [
 						{
@@ -2403,7 +2412,8 @@
 								"users",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur du projet ou les contributeurs de ce dernier peuvent lister les utilisateurs liés à un projet |"
 					},
 					"response": [
 						{
@@ -2676,7 +2686,8 @@
 								"3",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur du projet peut supprimer un utilisateur lié à un projet |"
 					},
 					"response": [
 						{
@@ -3002,7 +3013,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Ce dossier comprend une série complète de tests d'API visant à explorer les fonctionnalités liées aux \"contributors\". Il est conçu pour éclaircir qui peut créer et ajouter des contributeurs dans le système, ainsi que pour détailler toutes les permissions qui leur sont accordées. Le but est d'assurer une compréhension complète des rôles et des accès permis pour chaque type de \"contributor\"."
 		},
 		{
 			"name": "Issue",
@@ -3045,7 +3057,8 @@
 								"issues",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur et les contributeurs d'un projet peuvent créer des problèmes |"
 					},
 					"response": [
 						{
@@ -3418,7 +3431,8 @@
 								"issues",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur du projet ou ses contributeurs peuvent lister les les problèmes |"
 					},
 					"response": [
 						{
@@ -3698,7 +3712,8 @@
 								"issues",
 								"7"
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un probleme peut l'editer et le mettre à jour |"
 					},
 					"response": [
 						{
@@ -4187,7 +4202,8 @@
 								"7",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un projet ou l'auteur d'un probleme peuvent supprimer ce dernier |"
 					},
 					"response": [
 						{
@@ -4460,7 +4476,7 @@
 							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
 						},
 						{
-							"name": "4- L'auteur connecté d'un projet ne peut pas supprimer un probleme de ce dernier",
+							"name": "4- L'auteur connecté d'un projet peut supprimer un probleme de ce dernier",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [
@@ -4633,7 +4649,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Ce dossier contient une suite exhaustive de tests d'API focalisée sur la gestion des problèmes (issues) en relation avec les projets. Il explore qui est autorisé à créer, modifier et supprimer des problèmes, afin de décomposer et de comprendre la logique d'accès et les permissions pour ces actions spécifiques. Ces tests sont essentiels pour garantir que les contrôles d'accès sont à la fois efficaces et sécurisés au sein de l'API."
 		},
 		{
 			"name": "Comment",
@@ -4671,7 +4688,8 @@
 								"comments",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un projet ou ses contributeurs peuvent créer un commentaire sur un probleme |"
 					},
 					"response": [
 						{
@@ -5054,7 +5072,8 @@
 								"comments",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un projet ou ses contributeurs peuvent acceder à la liste des commentaire sur un probleme |"
 					},
 					"response": [
 						{
@@ -5402,7 +5421,8 @@
 								"2",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un commentaire peut l'editer et le modifier |"
 					},
 					"response": [
 						{
@@ -5777,7 +5797,7 @@
 					]
 				},
 				{
-					"name": "17- Supprimer un commentaire",
+					"name": "18- Supprimer un commentaire",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -5801,7 +5821,8 @@
 								"2",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| Seul l'auteur d'un commentaire ou l'auteur du projet peuvent supprimer le commentaire |"
 					},
 					"response": [
 						{
@@ -6046,18 +6067,18 @@
 							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
 						},
 						{
-							"name": "4- l'auteur du projet ne peut pas supprimer un commentaire",
+							"name": "4- l'auteur du projet peut supprimer un commentaire",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDMxNzg1LCJpYXQiOjE2OTU4Mzk3ODUsImp0aSI6IjJjYzFmMDlmMzc5MzRlNDliZWE4OTAyMzk1OTA2NjBiIiwidXNlcl9pZCI6Mn0.F5DXp2E_INdB1_1brpKVcrtDByzFTYa8clWdMjp-YDs",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4NDkxODQxLCJpYXQiOjE2OTU4OTk4NDEsImp0aSI6IjQyMWEwNzRiMTc5MDRhZDdiNTJiY2M4ODJjZDA0OWFmIiwidXNlcl9pZCI6NX0.ENZmHGMNWzh7ZY_LZUhSVw0zdBBPNnaxfG0dl4jgJ0c",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/2/issues/9/comments/2/",
+									"raw": "http://127.0.0.1:8000/API_SOFTDESK/projects/5/issues/10/comments/5/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -6069,30 +6090,26 @@
 									"path": [
 										"API_SOFTDESK",
 										"projects",
-										"2",
+										"5",
 										"issues",
-										"9",
+										"10",
 										"comments",
-										"2",
+										"5",
 										""
 									]
 								}
 							},
-							"status": "Forbidden",
-							"code": 403,
-							"_postman_previewlanguage": "json",
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
 							"header": [
 								{
 									"key": "Date",
-									"value": "Thu, 28 Sep 2023 19:17:28 GMT"
+									"value": "Sat, 30 Sep 2023 07:58:26 GMT"
 								},
 								{
 									"key": "Server",
 									"value": "WSGIServer/0.2 CPython/3.10.12"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
 								},
 								{
 									"key": "Vary",
@@ -6108,7 +6125,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "63"
+									"value": "0"
 								},
 								{
 									"key": "X-Content-Type-Options",
@@ -6124,7 +6141,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+							"body": null
 						},
 						{
 							"name": "5- L'auteur du commentaire peut le supprimer",
@@ -6206,7 +6223,7 @@
 					]
 				},
 				{
-					"name": "18- Appeler et voir le commentaire par son ID",
+					"name": "19- Appeler et voir le commentaire par son ID",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -6230,7 +6247,8 @@
 								"2",
 								""
 							]
-						}
+						},
+						"description": "| CONCLUSIONS |\n| --- |\n| L'utilisateur doit être authentifié |\n| L'auteur d'un projet et tous les contributeurs de ce dernier peuvent peuvent voir un commentaire par son ID |"
 					},
 					"response": [
 						{
@@ -6557,7 +6575,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Ce dossier regroupe une série complète de tests d'API se concentrant sur la gestion des commentaires associés aux problèmes dans les projets. Il décortique les règles de qui peut créer, modifier, et supprimer des commentaires. L'objectif est de comprendre en détail les permissions et les contrôles d'accès relatifs à ces actions. Les tests inclus permettent d'assurer que les fonctionnalités liées aux commentaires sont à la fois robustes et sécurisées."
 		}
 	]
 }

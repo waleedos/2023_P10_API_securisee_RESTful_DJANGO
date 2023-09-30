@@ -8,9 +8,9 @@
 Application pour signaler et suivre les problèmes techniques des entreprises clientes en B2B.
 
 ## Technologies
-Python
-Django
-Django Rest Framework
+* Python
+* Django
+* Django Rest Framework
 
 
 ## Contribuer au projet
@@ -60,7 +60,7 @@ python manage.py runserver
 ## Documentation Postman pour Softdesk
 
 Lien vers la documentation publiée de Postman :
-[POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/...)
+[POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/30089525/2s9YJaYPpq)
 
 
 ## Installation de Postman
@@ -87,10 +87,14 @@ cd Postman
 ./Postman
 ```
 
+## Si vous voulez consulter mon Profil publique POSTMAN : 
+[My POSTMAN PUBLIC PROFILE ](https://www.postman.com/ewekdev?tab=collections)
+
+
 ## Importer la documentation Postman publiée, et pour cela, il existe 3 façons : 
 ### 1- Ouvrez votre navigateur vers la documentation Postman publiée :
 
-[POSTMAN SOFTDESK COLLECTION ](https://app.getpostman.com/run-collection/30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30089525-9e9772b9-a8b7-4b86-b446-82b8cc05e55a%26entityType%3Dcollection%26workspaceId%3Def0eb810-172d-4467-ab6c-6250b50b8496)
+[POSTMAN SOFTDESK COLLECTION ](https://documenter.getpostman.com/view/30089525/2s9YJaYPpq)
 
 ### 2- Cliquez sur le bouton "Run in Postman" en haut à droite oubien sur le bouton suivant : 
 
@@ -343,7 +347,7 @@ python manage.py runserver
       <td>L'utilisateur doit être authentifié</td>
     </tr>
       <tr>
-      <td>L'utilisateur authentifié peut créer un projet</td>
+      <td>Un projet n'est accessible qu'à son créateur et ses contributeurs</td>
     </tr>
   </table>
 
@@ -391,7 +395,7 @@ python manage.py runserver
       <td>L'utilisateur doit être authentifié</td>
     </tr>
       <tr>
-      <td>Les projets ne sont visibles que par leur auteur ou contributeur</td>
+      <td>Les projets ne sont visibles que par leur auteur ou contributeurs</td>
     </tr>
   </table>
   
@@ -596,7 +600,7 @@ python manage.py runserver
       <td>L'utilisateur doit être authentifié</td>
     </tr>
       <tr>
-      <td>Seul l'auteur du projet ou les contributeurs peuvent lister les utilisateurs liés à un projet</td>
+      <td>Seul l'auteur du projet ou les contributeurs de ce dernier peuvent lister les utilisateurs liés à un projet</td>
     </tr>
   </table>
         
