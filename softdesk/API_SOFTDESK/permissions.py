@@ -1,8 +1,6 @@
 from rest_framework.permissions import BasePermission
 from .models import Project
 from .models import Contributor
-from .models import Issue
-from .models import Comment
 from django.shortcuts import get_object_or_404
 
 # PERMISSION FOR ENDPOINT : Project
@@ -16,7 +14,8 @@ from django.shortcuts import get_object_or_404
 # 5. GET - Retrieve project details from its id (Author or Contributor)
 # 6. PUT - Update a project (Author only)
 # 7. DELETE - Delete a project and its problems (Author only)
-#
+
+
 class PermissionProject(BasePermission):
 
     # Rule
@@ -29,7 +28,7 @@ class PermissionProject(BasePermission):
         user = request.user
 
         print("")
-        print("# Permission_Project(has_permission) - Action : ", view.action, " User : ",user )
+        print("# Permission_Project(has_permission) - Action : ", view.action, " User : ", user)
 
         # 3. GET - Retrieve the list of all the projects attached to the connected user
         if view.action == "list":
@@ -63,8 +62,8 @@ class PermissionProject(BasePermission):
             print("# Action : Destroy")
             print("# destroy will be process in has_object_permission()")
             return True
-        
-        # End of this permission class 
+
+        # End of this permission class
         print("# Permission_Project(has_permission) is finished")
         return True
 
@@ -72,13 +71,16 @@ class PermissionProject(BasePermission):
         user = request.user
 
         print("")
-        print("# Permission_Project(has_object_permission) : View action = ", view.action, "User = ", user, "Object author =", obj.author)
+        print(
+            f"# Permission_Project(has_object_permission) : View action = {view.action}, User = {user}, "
+            f"Object author = {obj.author}"
+            )
 
         if view.action == "update" or view.action == "destroy":
             print("# Action : Update / Destroy")
             print("# Only project author is able to update/destroy a project")
 
-            if (user == obj.author): 
+            if (user == obj.author):
                 print("# User is the author. Author is authorized")
                 return True
             else:
@@ -89,18 +91,17 @@ class PermissionProject(BasePermission):
             print("# Action : Retrieve")
             print("# Author and contributor are able to retrieve a project")
 
-            if (user == obj.author): 
+            if (user == obj.author):
                 print("# User is author. Author is authorized")
                 return True
 
             if (user in obj.contributors.all()):
                 print("# User is a contributor. Contributor is authorized")
                 return True
-            
+
             # Permission denied
             print("# Not author, not contributor : Permission denied")
             return False
-
 
         print("# Permission_Project(has_object_permission) is finished")
         return True
@@ -126,12 +127,12 @@ class PermissionProjectsUsers(BasePermission):
     def has_permission(self, request, view):
         user = request.user
 
-        print("# Permission_ProjectsUsers(has_permission) - Action : ", view.action, " User : ", user )
+        print("# Permission_ProjectsUsers(has_permission) - Action : ", view.action, " User : ", user)
 
         if view.action == "list":
             print("# Action : List")
             print("# Only project author or contributors are able to list users attached to a project")
-            
+
             project_id = view.kwargs.get('project_id')
             project = get_object_or_404(Project, id=project_id)
 
@@ -148,11 +149,10 @@ class PermissionProjectsUsers(BasePermission):
             print("# User is not the author and not a contributor, user is not authorized")
             return False
 
-
         if view.action == "create":
             print("# Action : Create")
             print("# Only project author is able to add contributor")
-            
+
             project_id = view.kwargs.get('project_id')
             project = get_object_or_404(Project, id=project_id)
 
@@ -161,7 +161,7 @@ class PermissionProjectsUsers(BasePermission):
             if user == project.author:
                 print("# User is the project author : Author is authorized")
                 return True
-            
+
             print("# User is not the project author : User is not authorized")
             return False
 
@@ -177,7 +177,7 @@ class PermissionProjectsUsers(BasePermission):
             if user == project.author:
                 print("# User is the project author : Author is authorized")
                 return True
-            
+
             print("# User is not the project author : User is not authorized")
             return False
 
@@ -193,14 +193,14 @@ class PermissionProjectsUsers(BasePermission):
             if user == project.author:
                 print("# User is the project author : Author is authorized")
                 return True
-            
+
             print("# User is not the project author : User is not authorized")
             return False
 
         if view.action == "retrieve":
             print("# Action : Retrieve")
             print("# Only project author or contributors are able to retrieve user attached to a project")
-            
+
             project_id = view.kwargs.get('project_id')
             project = get_object_or_404(Project, id=project_id)
 
@@ -217,29 +217,30 @@ class PermissionProjectsUsers(BasePermission):
             print("# User is not the author and not a contributor, user is not authorized")
             return False
 
-
         print("# Permission_ProjectsUsers(has_permission) is finished")
         return True
 
     def has_object_permission(self, request, view, obj):
         user = request.user
-        print("# Permission_ProjectsUsers(has_object_permission) : View action = ", view.action, "User = ", user, "Object author =", obj.author)
+        print(
+            f"# Permission_ProjectsUsers(has_object_permission) : View action = {view.action}, User = {user}, "
+            f"Object author = {obj.author}"
+            )
 
         if view.action == "list":
             print("Action : List")
-           
+
         if view.action == "create":
             print("Action : Create")
-           
+
         if view.action == "update":
             print("Action : Update")
-           
+
         if view.action == "destroy":
             print("Action : Destroy")
-           
-        if view.action == "retrieve":
-            print("Action : Retrieve")                       
 
+        if view.action == "retrieve":
+            print("Action : Retrieve")
 
         print("# Permission_ProjectsUsers(has_object_permission) is finished")
         return True
@@ -267,7 +268,7 @@ class PermissionIssue(BasePermission):
     def has_permission(self, request, view):
         user = request.user
 
-        print("# Permission_Issue(has_permission) - Action : ", view.action, " User : ", user )
+        print("# Permission_Issue(has_permission) - Action : ", view.action, " User : ", user)
 
         if view.action == "list":
             print("# Action : List")
@@ -280,12 +281,12 @@ class PermissionIssue(BasePermission):
 
             if user == project.author:
                 print("# User is the project author. Project author is authorized")
-                return True        
+                return True
 
             if Contributor.objects.filter(user=user, project=project).exists():
                 print("# User is a project contributor : Contributor is authorized to list")
                 return True
-            
+
             print("# User is a not a project contributor : User is not authorized to list")
             return False
 
@@ -305,34 +306,35 @@ class PermissionIssue(BasePermission):
             if Contributor.objects.filter(user=user, project=project).exists():
                 print("# User is a project contributor : Contributor is authorized to create")
                 return True
-            
+
             print("# User is a not a project contributor : User is not authorized to create")
             return False
 
         if view.action == "update":
             print("# Action : Update")
-            
+
         if view.action == "destroy":
             print("# Action : Destroy")
 
         if view.action == "retrieve":
             print("# Action : Retrieve")
 
-
         print("# Permission_Issue(has_permission) is finished")
         return True
 
     def has_object_permission(self, request, view, obj):
         user = request.user
-        print("# Permission_Issue(has_object_permission) : View action = ", view.action, "User = ", user, "Object author =", obj.author)
-        
+        print(
+            f"# Permission_Issue(has_object_permission) : View action = {view.action}, User = {user}, "
+            f"Object author = {obj.author}"
+            )
 
         if view.action == "list":
             print("# Action : List")
-           
+
         if view.action == "create":
             print("# Action : Create")
-           
+
         if view.action == "update":
             print("# Action : Update")
             print("# Only issue's author can update the issue")
@@ -352,18 +354,17 @@ class PermissionIssue(BasePermission):
                 print("# User is the issue author. User is authorized")
                 return True
             else:
-               print("# User is not the issue author. User is unauthorized")
-               return False
+                print("# User is not the issue author. User is unauthorized")
+                return False
 
         if view.action == "retrieve":
-            print("# Action : Retrieve")                       
+            print("# Action : Retrieve")
             print("# Project author, contributors or issue's author can retrieve")
 
             project_id = view.kwargs.get('project_id')
             project = get_object_or_404(Project, id=project_id)
 
             print("# Project_id :", project_id)
-
 
             if user == project.author:
                 print("# User is the project author. User is authorized")
@@ -372,7 +373,7 @@ class PermissionIssue(BasePermission):
             if user == obj.author:
                 print("# User is the issue author. User is authorized")
                 return True
-            
+
             if Contributor.objects.filter(user=user, project=project).exists():
                 print("# User is a project contributor. User is authorized")
                 return True
@@ -407,7 +408,7 @@ class PermissionComment(BasePermission):
     def has_permission(self, request, view):
         user = request.user
 
-        print("# Permission_Comment(has_permission) - Action : ", view.action, " User : ", user )
+        print("# Permission_Comment(has_permission) - Action : ", view.action, " User : ", user)
 
         if view.action == "list":
             print("# Action : List")
@@ -451,7 +452,7 @@ class PermissionComment(BasePermission):
 
         if view.action == "update":
             print("# Action : Update")
-            
+
         if view.action == "destroy":
             print("# Action : Destroy")
 
@@ -463,15 +464,17 @@ class PermissionComment(BasePermission):
 
     def has_object_permission(self, request, view, obj):
         user = request.user
-        print("# Permission_Comment(has_object_permission) : View action = ", view.action, "User = ", user, "Object author =", obj.author)
-        
+        print(
+            f"# Permission_Comment(has_object_permission) : View action = {view.action}, User = {user}, "
+            f"Object author = {obj.author}"
+            )
 
         if view.action == "list":
             print("# Action : List")
-           
+
         if view.action == "create":
             print("# Action : Create")
-           
+
         if view.action == "update":
             print("# Action : Update")
             print("# Only comment's author can update comment")
@@ -482,7 +485,7 @@ class PermissionComment(BasePermission):
             else:
                 print("# User is not the comment's author. User is not authorized")
                 return False
-           
+
         if view.action == "destroy":
             print("# Action : Destroy")
             print("# Only comment's author can delete comment")
@@ -493,7 +496,6 @@ class PermissionComment(BasePermission):
             else:
                 print("# User is not the comment's author. User is not authorized")
                 return False
-
 
         if view.action == "retrieve":
             print("# Action : Retrieve")
@@ -507,7 +509,7 @@ class PermissionComment(BasePermission):
             if user == project.author:
                 print("# User is the project author. User is authorized")
                 return True
-                
+
             if user == obj.author:
                 print("# User is the comment's author. User is authorized")
                 return True
@@ -518,7 +520,6 @@ class PermissionComment(BasePermission):
             else:
                 print("# User is a not a project contributor. User is not authorized")
                 return False
-
 
         print("# Permission_Comment(has_object_permission) is finished")
         return True

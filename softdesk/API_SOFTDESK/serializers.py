@@ -1,11 +1,12 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
 
 from .models import Project
 from .models import Contributor
 from .models import Issue
 from .models import Comment
+
 
 class SignupSerializer(ModelSerializer):
 
@@ -13,7 +14,7 @@ class SignupSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ( 'first_name', 'last_name', 'username','email', 'password','date_joined')
+        fields = ('first_name', 'last_name', 'username', 'email', 'password', 'date_joined')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, data):
@@ -22,7 +23,7 @@ class SignupSerializer(ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
     author = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=False)
-    
+
     class Meta:
         model = Project
         fields = '__all__'
@@ -51,6 +52,3 @@ class CommentSerializer(ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
-
-
-
