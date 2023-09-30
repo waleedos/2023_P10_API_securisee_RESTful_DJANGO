@@ -777,7 +777,7 @@ python manage.py runserver
     * URI           : /projects/{id}/issues/{id}
     * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}
     * En-têtes      : Authorization = Bearer [jeton d'accès]
-    * Corps         : : Brut - JSON
+    * Corps         : Brut - JSON
 
 ```
 {
@@ -822,6 +822,303 @@ python manage.py runserver
     </tr>
       <tr>
       <td>Seul l'auteur d'un probleme peut l'editer et le mettre à jour</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 14 Supprimer un problème d'un projet
+
+    |PERMISSIONS     |
+    |----------------|
+    |IsAuthenticated |
+    |----------------|
+    |PermissionIssue |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "DELETE"
+    * URI           : /projects/{id}/issues/{id}
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 204 No Content"
+
+```
+
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un projet ou l'auteur d'un probleme peuvent supprimer ce dernier</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 15 Créer des commentaires sur un problème
+
+    |PERMISSIONS       |
+    |------------------|
+    |IsAuthenticated   |
+    |------------------|
+    |PermissionComment |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "POST"
+    * URI           : /projects/{id}/issues/{id}/comments/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Brut - JSON
+
+```
+{
+    "description": "L'auteur d'un projet et ses contributeurs peuvent commenter un des probleme de ce projet",
+    "author": "2"
+}
+
+``` 
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 201 Created"
+
+```
+{
+    "id": 2,
+    "issue": 9,
+    "description": "L'auteur d'un projet peut commenter un des probleme de ce projet",
+    "created_time": "2023-09-28T18:41:57.017156+02:00",
+    "author": 2
+}
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un projet ou ses contributeur peuvent créer un commentaire sur un probleme</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 16 Récupérer la liste de tous les commentaires liés à un problème
+
+    |PERMISSIONS       |
+    |------------------|
+    |IsAuthenticated   |
+    |------------------|
+    |PermissionComment |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /projects/{id}/issues/{id}/comments/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+[
+    {
+        "id": 1,
+        "issue": 9,
+        "description": "Je suis juste un contributor de ce projet, et je peut commenter un de ses probleme",
+        "created_time": "2023-09-28T18:39:33.193915+02:00",
+        "author": 4
+    },
+    {
+        "id": 2,
+        "issue": 9,
+        "description": "L'auteur d'un projet peut commenter un des probleme de ce projet",
+        "created_time": "2023-09-28T18:41:57.017156+02:00",
+        "author": 2
+    }
+]
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un projet ou ses contributeur peuvent acceder à la liste des commentaire sur un probleme</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 17 Modifier un commentaires sur un problème
+
+    |PERMISSIONS       |
+    |------------------|
+    |IsAuthenticated   |
+    |------------------|
+    |PermissionComment |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "PUT"
+    * URI           : /projects/{id}/issues/{id}/comments/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Brut - JSON
+
+```
+{
+    "description": "Commentaire pour le projet N° 2 - probleme N° 9 changement du commentaire accepté car c'est l'auteur de ce dernier",
+    "author": 4
+}
+
+``` 
+
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+{
+    "id": 2,
+    "issue": 9,
+    "description": "Commentaire pour le projet N° 2 - probleme N° 9 changement du commentaire accepté car c'est l'auteur de ce dernier",
+    "created_time": "2023-09-28T21:09:51.081702+02:00",
+    "author": 4
+}
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un commentaire peut l'editer et le modifier</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 18 Supprimer un commentaires
+
+    |PERMISSIONS       |
+    |------------------|
+    |IsAuthenticated   |
+    |------------------|
+    |PermissionComment |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "DELETE"
+    * URI           : /projects/{id}/issues/{id}/comments/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 204 No Content"
+
+```
+
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>Seul l'auteur d'un commentaire ou l'auteur du projet peuvent supprimer le commentaire</td>
+    </tr>
+  </table>
+        
+========================================================================================
+
+## 19 Appeler et voir le commentaire par son ID
+
+    |PERMISSIONS       |
+    |------------------|
+    |IsAuthenticated   |
+    |------------------|
+    |PermissionComment |    
+
+#### Exécution de la requête
+
+    * Ouvrez Postman
+    * Méthode       : "GET"
+    * URI           : /projects/{id}/issues/{id}/comments/{id}/
+    * URL complete  : http://127.0.0.1:8000/API_SOFTDESK/projects/{id}/issues/{id}/comments/{id}/
+    * En-têtes      : Authorization = Bearer [jeton d'accès]
+    * Corps         : Aucun
+    * Cliquez sur le bouton "Envoyer"
+    * Postman lance la requête
+    * Postman affiche le résultat et les données sérialisées
+
+#### Résultat de la requête
+    * Résultat : "Statut : 200 OK"
+
+```
+
+
+```   
+
+  <table border="1">
+    <tr>
+      <th>CONCLUSIONS</th>
+    </tr>
+    <tr>
+      <td>L'utilisateur doit être authentifié</td>
+    </tr>
+      <tr>
+      <td>L'auteur d'un projet et tous les contributeurs de ce dernier peuvent peuvent voir un commentaire par son ID</td>
     </tr>
   </table>
         
