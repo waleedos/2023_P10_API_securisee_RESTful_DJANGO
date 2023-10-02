@@ -88,7 +88,7 @@ cd Postman
 ```
 
 ## Si vous voulez consulter mon Profil publique POSTMAN : 
-[My POSTMAN PUBLIC PROFILE ](https://www.postman.com/ewekdev?tab=collections)
+[My POSTMAN PUBLIC PROFILE](https://www.postman.com/ewekdev?tab=collections)
 
 
 ## Importer la documentation Postman publiée, et pour cela, il existe 3 façons : 
@@ -1127,3 +1127,9 @@ python manage.py runserver
   </table>
         
 ========================================================================================
+
+Et pour finir, 
+
+### Voici mon rapport pour la conformitée demandée de ce code pour qu'il respecte l'OASP, l'RGPD et le GREEN-CODE : 
+
+[CLIQUEZ ICI] https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/conformit%C3%A9-de-mon-code_owasp_rgpd_et_green_code.pdf
