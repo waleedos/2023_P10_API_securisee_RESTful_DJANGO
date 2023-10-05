@@ -1133,3 +1133,13 @@ Et pour finir,
 ### Voici mon rapport pour la conformitée demandée de ce code pour qu'il respecte l'OASP, l'RGPD et le GREEN-CODE : 
 
 [CLIQUEZ ICI] https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/conformit%C3%A9-de-mon-code_owasp_rgpd_et_green_code.pdf
+
+
+### Structure des dossiers et fichiers du projet :
+Afin de voir la structure complete du projet, vous pouvez voir le fichier /Documents/structure_de_ce_projet.txt, oubien vous pouvez meme
+générer de nouveau ce fichier de la façon suivante ;
+Executez la commande suivante quand vous etes à la racine du projet : 
+```
+tree -I 'venv|__pycache__|flake-report|__init__.py|migrations' >> structure_de_ce_projet.txt
+```
+[Click pour voir la structure actuelle:](https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO.git/blob/main/Documents/structure_de_ce_projet.txt)

@@ -1,0 +1,24 @@
+.
+├── README.md
+├── requirements.txt
+├── softdesk
+│   ├── API_SOFTDESK
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── permissions.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── db.sqlite3
+│   ├── manage.py
+│   └── softdesk
+│       ├── asgi.py
+│       ├── settings.py
+│       ├── urls.py
+│       ├── views.py
+│       └── wsgi.py
+└── structure_de_ce_projet.txt
+
+3 directories, 18 files

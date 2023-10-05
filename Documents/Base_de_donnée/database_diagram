@@ -1,0 +1,19 @@
+// Database Schema
+digraph {
+	Project
+	Project -> Contributor [label="contributor: "]
+	Project -> Issue [label="issue: "]
+	Project -> User [label="author: ForeignKey"]
+	Project -> User [label="contributors: ManyToMany"]
+	Contributor
+	Contributor -> User [label="user: ForeignKey"]
+	Contributor -> Project [label="project: ForeignKey"]
+	Issue
+	Issue -> Comment [label="comment: "]
+	Issue -> Project [label="project: ForeignKey"]
+	Issue -> User [label="author: ForeignKey"]
+	Issue -> User [label="assignee: ForeignKey"]
+	Comment
+	Comment -> User [label="author: ForeignKey"]
+	Comment -> Issue [label="issue: ForeignKey"]
+}
