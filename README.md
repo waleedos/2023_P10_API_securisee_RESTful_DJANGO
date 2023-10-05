@@ -1142,4 +1142,11 @@ Executez la commande suivante quand vous etes à la racine du projet :
 ```
 tree -I 'venv|__pycache__|flake-report|__init__.py|migrations' >> structure_de_ce_projet.txt
 ```
-[Click pour voir la structure actuelle:](https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO.git/blob/main/Documents/structure_de_ce_projet.txt)
+[Click pour voir la structure actuelle:](https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/structure_de_ce_projet.txt)
+
+
+### Les Etapes de créations de ce projet de A à Z : 
+[Voir Les Etapes de création:](https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/2-Les-Etapes-de-la-cr%C3%A9ation.pdf)
+
+### Questions / Réponse pour mieux comprendre le projet : 
+[QUESTIONS / REPONSES:](https://github.com/waleedos/2023_P10_API_securisee_RESTful_DJANGO/blob/main/Documents/3-Questions-Reponses.pdf)
